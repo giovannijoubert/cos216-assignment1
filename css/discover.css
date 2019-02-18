@@ -1,0 +1,185 @@
+header {
+     background-image: linear-gradient(57deg, #3494E6 0%, #EC6EAD 100%);
+}
+ ::selection {
+     background: #7deddc;
+}
+ ul.topNav li a.activeNav {
+     background: linear-gradient(65deg, #3494E6 -25%, #7deddc 100%);
+}
+ ul.topNav li a:hover:not(.activeNav) {
+     color: #7deddc;
+     border-color: #7deddc;
+}
+ .body-elements{
+     padding: 50px;
+}
+/*search*/
+ .filter-container{
+     text-align: center;
+}
+ .search-icon{
+     color: #c682ff;
+}
+ .search-bar{
+     width: 200px;
+     height: 30px;
+     border: double 1px transparent;
+     border-radius: 5px;
+     background-image: linear-gradient(white, white), radial-gradient(circle at top left, #3494E6,#7deddc);
+     background-origin: border-box;
+     background-clip: content-box, border-box;
+     margin-right: 10px;
+}
+ .filter-rating {
+     padding-left: 20px;
+     color: #555;
+     display: inline-block;
+}
+ .filter-rating > label {
+     padding-right: 10px;
+}
+ .filter-rating > span {
+     display: inline-block;
+     position: relative;
+}
+ .filter-rating:hover > span:before{
+     content: "\2605";
+    /* Place a solid star over all the empty stars when you hover them. */
+     position: absolute;
+     color: #7deddc;
+}
+ .filter-rating > span:hover ~ span:before {
+     content: "";
+    /* Remove the solid star from any siblings after the one you’re hovering. */
+}
+ .filter-genre {
+     height: 20px;
+     border-radius: 5px;
+     overflow: hidden;
+     background: url("../img/drop-down-arrow.svg") no-repeat 90% 50%, linear-gradient(65deg, #3494E6 -25%, #7deddc 100%);
+     background-size: 10px, cover;
+     position: relative;
+     margin-left: 20px;
+     padding: 10px;
+}
+ .filter-genre select {
+     color: #fff;
+     padding: 5px 8px;
+     width: 150px;
+     border: none;
+     box-shadow: none;
+     background: transparent;
+     background-image: none;
+     -webkit-appearance: none;
+}
+ .filter-genre select:focus {
+     outline: none;
+}
+/*RESPONSIVE*/
+ @media screen and (max-width: 670px) {
+     .filter-container{
+         margin-top: 50px;
+    }
+     .search-bar{
+         margin-bottom: 15px;
+    }
+     .filter-rating{
+         margin-bottom: 20px;
+    }
+}
+ .posters-holder{
+     margin: 0 auto;
+     overflow-y: scroll;
+     overflow-x: hidden;
+     padding: 30px;
+     width: 80%;
+     text-align: center;
+}
+ .posters-holder::-webkit-scrollbar {
+     display: none;
+}
+ .posters-holder img{
+     border-radius: 10px;
+}
+ .single-poster-holder, .single-poster-holder * {
+     box-sizing: border-box;
+}
+ .single-poster-holder {
+     position: relative;
+     display: inline-block;
+     overflow: hidden;
+     max-width: 335px;
+     height: auto;
+}
+ .single-poster-holder img {
+     max-width: 100%;
+}
+ .single-poster-holder .single-poster-layer_bottom {
+     display: block;
+}
+ .single-poster-holder .single-poster-layer_top {
+     border-radius: 10px;
+     opacity: 0;
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     width: 100%;
+     height: 100%;
+     background: rgba(0, 0, 0, 0.6);
+     color: #fff;
+     padding: 40px;
+     -moz-transition: all 0.4s ease-in-out 0s;
+     -webkit-transition: all 0.4s ease-in-out 0s;
+     -ms-transition: all 0.4s ease-in-out 0s;
+     transition: all 0.4s ease-in-out 0s;
+}
+ .single-poster-holder:hover .single-poster-layer_top, .single-poster-holder.active .single-poster-layer_top {
+     opacity: 1;
+}
+ .single-poster-holder p {
+     text-align: center;
+     font-size: 16px;
+     display: inline-block;
+     position: absolute;
+     top: 67%;
+     left: 50%;
+     -moz-transform: translate(-50%, -50%);
+     -webkit-transform: translate(-50%, -50%);
+     -ms-transform: translate(-50%, -50%);
+     transform: translate(-50%, -50%);
+}
+ .single-poster-holder .hvrbox-text_mobile {
+     font-size: 15px;
+     border-top: 1px solid rgb(179, 179, 179);
+    /* for old browsers */
+     border-top: 1px solid rgba(179, 179, 179, 0.7);
+     margin-top: 5px;
+     padding-top: 2px;
+     display: none;
+}
+ .single-poster-holder.active .hvrbox-text_mobile {
+     display: block;
+}
+ .single-poster-age-rating{
+     width: 20%;
+     margin: 0 auto;
+     border: solid 1px;
+     padding: 3px;
+}
+ .single-poster-holder h1{
+     font-size: 28px;
+}
+ .single-poster-holder h2{
+     font-size: 10px;
+}
+ .single-poster-holder h3{
+     font-size: 15px;
+}
+ .single-poster-holder h3::after{
+     content: " IMDB";
+     font-size: 8px;
+}
+ 

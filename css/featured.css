@@ -1,0 +1,15 @@
+header {
+     background-image: linear-gradient(57deg, #00F260 0%, #0575E6 100%);
+}
+ ::selection {
+     background: #7deddc;
+}
+ ul.topNav li a.activeNav {
+     background: linear-gradient(65deg, #00F260 -25%, #62adf7 100%);
+}
+ ul.topNav li a:hover:not(.activeNav) {
+     color: #7deddc;
+     border-color: #7deddc;
+}
+
+ 
