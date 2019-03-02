@@ -22,10 +22,18 @@ header {
 
 body {
 	margin: 0;
-	background-image: #fff;
+	background: #fff;
 	background-repeat: no-repeat;
 	font-family: 'Rubik', sans-serif;
 }
+
+.image_construction{
+    width: 50%;
+}
+.home_construction{
+      text-align: center;
+    }
+
 
 h1 {
     font-family: 'Rubik-bold', sans-serif;
@@ -43,6 +51,7 @@ ul.topNav {
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
+    min-height: 100px;
 }
 
 ul.topNav li {
@@ -58,7 +67,7 @@ ul.topNav li a {
 	padding: 14px 16px;
 	text-decoration: none;
 	border-bottom: 1px solid transparent;
-	transition: all ease-in-out 500ms;
+	transition: border-color ease-in-out 500ms;
 }
 
 ul.topNav li a:hover:not(.activeNav) {
@@ -78,7 +87,7 @@ ul.topNav li a.activeNav {
 
 /*RESPONSIVE*/
 
-@media screen and (max-width: 670px) {
+@media only screen and (max-width: 600px) {
 	ul.topNav li {
 		float: none;
 	}
@@ -93,10 +102,17 @@ ul.topNav li a.activeNav {
 		background: -webkit-linear-gradient(65deg, #00A2B8 -25%, #00F9D2 100%);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
+        margin-top: 90px!important;
 	}
     .homepage-hits{
     margin: 130px 50px 5px 50px!important;
 }
+    
+    .image_404{
+    width: 100%;
+}
+    
+
 }
 
 
@@ -106,7 +122,7 @@ ul.topNav li a.activeNav {
 	color: #ffffff;
 	text-align: center;
 	margin-top: 60px;
-	transition: all ease-in-out 800ms;
+	transition: transform ease-in-out 800ms;
 }
 
 .welcome-msg:hover {
@@ -129,7 +145,7 @@ ul.topNav li a.activeNav {
 .hero-posters img{
     max-width: 180px;
     margin: 1px;
-    	transition: all ease-in-out 400ms;
+    	transition: transform ease-in-out 400ms;
     border-radius: 5px;
 }
 
@@ -158,4 +174,6 @@ footer{
     color: #999;
     font-size: 11px;
 }
+
+ 
 
